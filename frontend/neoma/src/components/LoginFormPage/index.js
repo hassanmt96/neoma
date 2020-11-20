@@ -3,10 +3,6 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 
-
-//style
-
-
 function LoginFormPage() {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
