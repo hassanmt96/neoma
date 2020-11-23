@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import './SignupForm.css';
+import './SignUpForm.css';
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -26,6 +26,16 @@ function SignupFormPage() {
     }
     return setErrors(['Confirm Password field must be the same as the Password field']);
   };
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>

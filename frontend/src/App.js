@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Route, Switch } from "react-router-dom";
+import SignUpFormPage from "./components/SignUpFormPage";
+import LoginFormPage from "./components/LoginFormPage";
+import * as sessionActions from "./store/session";
+import Navigation from "./components/Navigation";
+
 
 function App() {
+  const dispatch = useDispatch();
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
+  }, [dispatch]);
+
+
   return (
-    <h1>Hello world!</h1>
+    isLoaded && (
+      <Switch>
+        {/* <Route exact path="/">
+          <DefaultHomePage />
+        </Route> */}
+        <Route path="/login">
+          <LoginFormPage />
+        </Route>
+        <Route path="/register">
+          <SignUpFormPage />
+        </Route>
+        {/* <Route path="/profile">
+          <ProfilePage /> */}
+        {/* </Route> */}
+      </Switch>
+    )
   );
-}
+};
 
 export default App;

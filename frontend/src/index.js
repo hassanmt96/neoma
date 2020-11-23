@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./context/Modal";
@@ -29,7 +31,7 @@ function Root() {
       <Provider store={store}>
         <BrowserRouter>
           <App />
-          {/* <Carrot /> */}
+
         </BrowserRouter>
       </Provider>
     </ModalProvider>
