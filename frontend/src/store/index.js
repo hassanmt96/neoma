@@ -4,7 +4,6 @@ import session from "./session";
 
 const rootReducer = combineReducers({
   session,
-  brews,
 });
 
 let enhancer;
