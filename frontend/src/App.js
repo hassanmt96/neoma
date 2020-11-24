@@ -17,6 +17,7 @@ function App() {
 
 
   return (
+    
     isLoaded && (
       <Switch>
        <Route exact path="/">
@@ -28,12 +29,12 @@ function App() {
         <Route path="/register">
           <SignUpFormPage />
         </Route>
-        {/* <Route path="/profile">
-          <ProfilePage /> */}
-        {/* </Route> */}
       </Switch>
     )
-  );
-};
-
-export default App;
+    );
+  };
+  
+  export default App;
+  {/* <Route path="/profile">
+    <ProfilePage /> */}
+  {/* </Route> */}
