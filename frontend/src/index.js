@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./context/Modal";
 import App from "./App";
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 
 import configureStore from "./store";
 import { restoreCSRF, fetch } from "./store/csrf";

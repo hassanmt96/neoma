@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import Title from '../../assets/asanamain1.png'
 
@@ -16,10 +17,10 @@ const Navbar = () => {
                 <span />
             </Hamburger>
             <Menu isOpen={isOpen}>
-                <MenuLink href="/">Why Neoma?</MenuLink>
-                <MenuLink href="https://github.com/hassanmt96/neoma-solo">Github</MenuLink>
-                <MenuLink href="">Login</MenuLink>
-                <MenuLink href="">Try for free</MenuLink>
+                <MenuLink to="/">Why Neoma?</MenuLink>
+                <ExternalLink href="https://github.com/hassanmt96/neoma-solo">Github</ExternalLink>
+                <MenuLink to="/login">Login</MenuLink>
+                <MenuLink to="">Try for free</MenuLink>
             </Menu>
         </Nav>
     )
@@ -77,7 +78,23 @@ position: relative;
 }
 `
 
-const MenuLink = styled.a`
+const MenuLink = styled(NavLink)`
+padding: 1rem 2rem;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+color: white;
+transition: all 0.2s ease-in;
+
+
+&:hover{
+    color: #34e1eb;
+
+}
+`
+
+
+const ExternalLink = styled.a`
 padding: 1rem 2rem;
 cursor: pointer;
 text-align: center;
