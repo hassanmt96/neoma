@@ -20,6 +20,7 @@ const Navbar = () => {
                 <MenuLink to="/">Why Neoma?</MenuLink>
                 <ExternalLink href="https://github.com/hassanmt96/neoma-solo">Github</ExternalLink>
                 <MenuLink to="/login">Login</MenuLink>
+                <MenuLink to="/register">Sign up today</MenuLink>
                 <MenuLink to="">Try for free</MenuLink>
             </Menu>
         </Nav>
