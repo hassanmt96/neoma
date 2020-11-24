@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 const Main = () => {
   return (
-    <Container>
-    </Container>
+    <MainContainer>
+    </MainContainer>
   );
 };
 
-const Container = styled.div`
+const MainContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;

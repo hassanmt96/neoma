@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import logo from '../../assets/atlogo.png';
 import Input from "../SignUpFormPage/Input";
 
-function LoginFormPage() {
+function Middlebar() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const [credential, setCredential] = useState("");
@@ -142,4 +142,4 @@ const Container = styled.div`
   }
 `;
 
-export default LoginFormPage;
+export default Middlebar;
