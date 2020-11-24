@@ -1,21 +1,21 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Title from '../../assets/asanamain1.png'
 
 const Navbar = () => {
-    const [state, setState] = useState(intialState)
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <Nav>
             <Logo href="">
                 <img src={Title} alt="" /><span>
                 </span>
             </Logo>
-            <Hamburger>
+            <Hamburger onClick={() => setIsOpen(!isOpen)}>
                 <span />
                 <span />
                 <span />
             </Hamburger>
-            <Menu>
+            <Menu isOpen={isOpen}>
                 <MenuLink href="/">Why Neoma?</MenuLink>
                 <MenuLink href="https://github.com/hassanmt96/neoma-solo">Github</MenuLink>
                 <MenuLink href="">Login</MenuLink>
@@ -52,7 +52,7 @@ const Hamburger = styled.div`
     width: 25px;
     margin-bottom: 4px;
     border-radius: 5px;
-    background: #7b7fda
+    background: #7b7fda;
 }
 
 
@@ -72,6 +72,8 @@ position: relative;
     overflow: hidden;
     flex-direction: column;
     width: 100%;
+    max-height: ${({isOpen}) => isOpen ? "300px" : "0"};
+    transition: max-height 0.3s ease-in;
 }
 `
 

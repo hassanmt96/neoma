@@ -17,4 +17,8 @@ const Container = styled.div`
 background:#171C48;
 height: 100vh;`
 
+
+// const Animation = styled
+
+
 export default HomePage;
