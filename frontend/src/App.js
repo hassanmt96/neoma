@@ -6,6 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import HomePage from './components/HomePage'
+import TaskManagementPage from './components/TaskManagementPage'
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/register">
           <SignUpFormPage />
+        </Route>
+        <Route path="/demo">
+        <TaskManagementPage />
         </Route>
       </Switch>
     )

@@ -39,12 +39,13 @@ function SideBar() {
 
   return (
    
-    <Container onSubmit={handleSubmit}>
+    <Container 
+        onSubmit={handleSubmit}>
         <LogoWrapper>
           <img src={logo} alt='' />
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </LogoWrapper>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <h3>register.</h3>
           <Input
             type="text"
