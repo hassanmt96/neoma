@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Main from '../components/Main/Main'
-import SideBar from '../components/Sidebar/Sidebar'
+import Main from '../Main'
+import SideBar from '../Sidebar/Sidebar'
 
 const Dashboard = () => {
     return (
@@ -12,4 +12,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Dashboard;

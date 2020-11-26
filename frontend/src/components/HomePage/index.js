@@ -17,10 +17,9 @@ const HomePage = () => {
 
 const Container = styled.div`
 background:#171C48;
-height: 100vh;`
+height: 200vh;`
 
 
-// const Animation = styled
 
 
 export default HomePage;

@@ -1,12 +1,12 @@
 import React from 'react';
-import TaskForm from './TaskForm';
+import Dashboard from './containers/Dashboard'
 
 
 
-const TaskManagementPage = (prop) => {
+const TaskManagementPage = () => {
     return (
         <div>
-            Demo
+            <Dashboard />
         </div>
     )
 }

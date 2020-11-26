@@ -7,23 +7,23 @@ import effort from '../../assets/effort.gif';
 
 const Video = () =>{
   return (
-    <gifWrapper>
-          <img src={effort} type="gif" />
-      </gifWrapper>
+    <GifWrapper>
+          <img src={effort} type="gif" alt='' />
+      </GifWrapper>
     );
   }
   
   
-    const gifWrapper = styled.div` 
+    const GifWrapper = styled.div` 
   
-    width: 100%;
-    height: 100%;
-    display: flex-end;
-    justify-content: center;
-    align-items: center;
-  `
-
-
-  export default Video; 
-
-
+    `
+    
+    export default Video; 
+    
+    
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex-end;
+  //   justify-content: center;
+  //   align-items: center;
+  // `

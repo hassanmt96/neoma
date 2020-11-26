@@ -39,8 +39,7 @@ function SideBar() {
 
   return (
    
-    <Container 
-        onSubmit={handleSubmit}>
+    <Container> 
         <LogoWrapper>
           <img src={logo} alt='' />
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
@@ -75,7 +74,7 @@ function SideBar() {
            onChange={(e) => setConfirmPassword(e.target.value)}
            required
           />
-        <button type="submit">Sign Up</button>
+        <Input type="submit" value='Sign Up' /> 
         </Form>
         <div>
         <Terms>
@@ -185,23 +184,6 @@ const Container = styled.div`
 `;
 
 
-const MainContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  h1 {
-    color: #f2db96;
-    font-size: 65px;
-    font-weight: 200;
-
-    @media (max-width: 900px) {
-      display: none;
-    }
-  }
-`;
 
 
 export default SideBar;

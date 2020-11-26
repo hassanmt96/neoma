@@ -9,12 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        unique: true,
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(200)
       },
       description: {
         allowNull: false,
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT(500)
       },
       deadline: {
         allowNull: false,
@@ -22,11 +23,13 @@ module.exports = {
       },
       projectId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER, 
+        references: {model: 'TeamProjects'}
       },
       creatorId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: { model: "Users"}
       },
       completed: {
         allowNull: false,
@@ -34,7 +37,8 @@ module.exports = {
       },
       assignedtoId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: { model: 'Users'}
       },
       createdAt: {
         allowNull: false,
