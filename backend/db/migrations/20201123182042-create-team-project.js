@@ -10,15 +10,16 @@ module.exports = {
       },
       name: {
         unique: true,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       teamleadId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {model: 'Users'}
       },
       description: {
-        type: Sequelize.TEXT(400),
+        type: Sequelize.TEXT,
         allowNull: false
       },
       createdAt: {

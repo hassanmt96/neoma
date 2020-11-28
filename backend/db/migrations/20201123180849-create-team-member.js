@@ -9,8 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       teamId: {
+        allowNull:false,
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: { model: 'Tasks'}
       },
       userId: {
         type: Sequelize.INTEGER,
