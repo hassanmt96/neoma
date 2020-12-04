@@ -15,17 +15,13 @@ const Container = styled.div`
 const Menu = () => {
     return (
         <Container>
-            <MenuLink title="Home" icon={'home'}/>
+            <MenuLink exact path='/' title="Home" icon={'home'}/>
             <br></br>
             <MenuLink title="My-Tasks" icon={'file-multiple'} />
             <br></br>
-            <MenuLink title="Inbox" icon={'inbox'}/>
+            <MenuLink href='' title="Add a task" icon={'cog'} />
             <br></br>
-            <MenuLink title="Favorites" icon={'heart'}/>
-            <br></br>
-            <MenuLink title="Settings" icon={'cog'} />
-            <br></br>
-            <MenuLink title="Calendar" icon={'calendar'} />
+            <MenuLink title="Invite friends" icon={'calendar'} />
         </Container>
     )
 }
